@@ -1,3 +1,27 @@
+<#
+    Script: split-data.ps1
+
+    Description:
+        Reads data.txt containing <title> and <copy> records.
+        For each record:
+          - Creates a text file named after the title.
+          - Prepends the contents of header.txt.
+          - Inserts the copy text.
+          - Appends the contents of footer.txt.
+
+    Input Files:
+        data.txt
+        header.txt
+        footer.txt
+
+    Output:
+        output\<title>.txt
+
+    Author: Jonathan Santos
+    Created: July 2026
+    Version: 1.0
+#>
+
 $inputFile = Join-Path $PSScriptRoot "data.txt"
 $headerFile = Join-Path $PSScriptRoot "header.txt"
 $footerFile = Join-Path $PSScriptRoot "footer.txt"
